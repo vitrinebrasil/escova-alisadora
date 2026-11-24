@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1a2c">
+<title>Escova alisadora – Vitrine Brasil</title>
+<meta name="description" content="Escova alisadora por R$ 23,95. Veja vídeos de clientes e compre direto na Shopee.">
+<style>
+:root{
+  --navy:#0b1a2c; --bg:#ffffff; --card:#f4f6f9; --line:#e0e6ee; --text:#13243a; --muted:#5a6b7f;
+  --accent:#ff7a1a; --accent-ink:#2a1200;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#eef3f8;padding:16px 0;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;text-decoration:none}
+.brand i{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-style:normal;font-weight:800}
+.brand b{color:var(--accent)}
+.hero{display:grid;gap:26px;padding:28px 0 24px;align-items:start}
+@media(min-width:760px){.hero{grid-template-columns:1fr 1fr;padding:44px 0 32px;gap:36px}}
+.gallery{display:grid;gap:10px}
+.stage{aspect-ratio:4/5;border-radius:18px;background:var(--card);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.stage img,.stage video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.stage img{background:var(--card)}
+.caption{margin:0;font-size:14px;color:var(--muted);min-height:1.6em}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.thumbs button{position:relative;padding:0;border:2px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden;cursor:pointer;aspect-ratio:1/1}
+.thumbs button[aria-current="true"]{border-color:var(--accent)}
+.thumbs button:focus-visible{outline:3px solid var(--text);outline-offset:2px}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.thumbs .vid::after{content:"";position:absolute;inset:0;margin:auto;width:26px;height:26px;border-radius:50%;background:rgba(11,26,44,.75) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 6.5v11l9-5.5z'/%3E%3C/svg%3E") center/18px no-repeat}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 12px;letter-spacing:-.5px}
+.lead{color:var(--muted);margin:0 0 18px;max-width:46ch}
+.price{margin:0 0 18px}
+.price strong{font-size:34px;display:block;line-height:1.2}
+.price span{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:17px;text-decoration:none;padding:15px 28px;border-radius:14px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+.small{font-size:13px;color:var(--muted);margin-top:12px}
+section{padding:26px 0}
+h2{font-size:24px;margin:0 0 16px}
+.list{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.item h3{margin:0 0 6px;font-size:17px}
+.item p{margin:0;color:var(--muted);font-size:15px}
+.proof{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);max-width:560px}
+.proof video{width:100%;aspect-ratio:9/16;object-fit:contain;border-radius:14px;background:#000;border:1px solid var(--line);display:block}
+.specs{display:grid;gap:10px;grid-template-columns:repeat(3,1fr);text-align:center}
+.specs div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 8px}
+.specs strong{display:block;font-size:20px}
+.specs span{font-size:13px;color:var(--muted)}
+ol.steps{margin:0;padding-left:22px;color:var(--muted)}
+ol.steps li{margin-bottom:8px}
+ol.steps b{color:var(--text)}
+.notice{background:var(--card);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;font-size:14px;color:var(--muted);margin-bottom:14px}
+footer{background:var(--card);border-top:1px solid var(--line);padding:24px 0 36px;font-size:13px;color:var(--muted)}
+footer a{color:var(--text)}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--navy);color:#eef3f8;border-top:1px solid #23405f;display:flex;gap:12px;align-items:center;justify-content:space-between;z-index:5}
+.sticky span{font-weight:700}
+.sticky small{display:block;font-weight:400;color:#9fb3c8;font-size:12px}
+.sticky .btn{padding:12px 22px;font-size:16px}
+@media(min-width:760px){.sticky{display:none}body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<!-- Google tag (Google Ads) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17990966767"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','AW-17990966767');
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><i>V</i><span>Vitrine <b>Brasil</b></span></a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="gallery">
+      <div class="stage" id="stage">
+        <video controls playsinline preload="metadata" poster="poster-2.jpg"><source src="depoimento-2.mp4" type="video/mp4"></video>
+      </div>
+      <p class="caption" id="caption">Cliente mostrando o uso e os detalhes da escova.</p>
+      <div class="thumbs">
+        <button type="button" class="vid" aria-current="true" aria-label="Vídeo da cliente usando" data-type="video" data-src="depoimento-2.mp4" data-poster="poster-2.jpg" data-cap="Cliente mostrando o uso e os detalhes da escova."><img src="poster-2.jpg" alt="" loading="lazy"></button>
+        <button type="button" class="vid" aria-label="Vídeo do produto" data-type="video" data-src="video.mp4" data-poster="poster.jpg" data-cap="Vídeo do produto."><img src="poster.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="Foto da escova" data-type="image" data-src="escova-1.webp" data-cap="Escova alisadora."><img src="escova-1.webp" alt="" loading="lazy"></button>
+        <button type="button" aria-label="Foto: antes e depois" data-type="image" data-src="escova-2.webp" data-cap="Aquecimento rápido: antes e depois."><img src="escova-2.webp" alt="" loading="lazy"></button>
+        <button type="button" aria-label="Foto: medidas" data-type="image" data-src="escova-3.webp" data-cap="Medidas da escova."><img src="escova-3.webp" alt="" loading="lazy"></button>
+      </div>
+    </div>
+    <div>
+      <h1>Escova alisadora</h1>
+      <p class="lead">Escova alisadora com aquecimento rápido. Alise e modele o cabelo em casa, de um jeito prático.</p>
+      <div class="price">
+        <strong>R$ 23,95</strong>
+        <span>ou 4x de R$ 6,60</span>
+      </div>
+      <a class="btn" href="https://s.shopee.com.br/2BFjkVZKKB" target="_blank" rel="noopener sponsored">Comprar na Shopee</a>
+      <p class="small">O preço mostrado é de referência. Vale o preço da página da Shopee.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Por que escolher</h2>
+    <div class="list">
+      <div class="item"><h3>Aquece em até 30 segundos</h3><p>Pré-aquecimento rápido e temperatura constante a partir dos 20 segundos.</p></div>
+      <div class="item"><h3>Vários looks em até 3 minutos</h3><p>Escova e alisa em uma só passada, sem vários acessórios.</p></div>
+      <div class="item"><h3>Compra protegida</h3><p>Pagamento, entrega e proteção da compra são feitos pela Shopee.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Veja quem já comprou</h2>
+    <div class="proof">
+      <video controls playsinline preload="none" poster="poster-3.jpg"><source src="depoimento-3.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="none" poster="poster-5.jpg"><source src="depoimento-5.mp4" type="video/mp4"></video>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tamanho</h2>
+    <div class="specs">
+      <div><strong>27 cm</strong><span>comprimento total</span></div>
+      <div><strong>12 cm</strong><span>parte da escova</span></div>
+      <div><strong>3 cm</strong><span>largura</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como comprar</h2>
+    <ol class="steps">
+      <li><b>Toque em “Comprar na Shopee”.</b> Você vai para a página do produto na loja.</li>
+      <li><b>Escolha cor ou voltagem</b>, se o produto tiver opções.</li>
+      <li><b>Finalize na Shopee.</b> É necessário ter conta; se ainda não tiver, o cadastro é feito lá.</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="notice"><strong>Aviso:</strong> o Vitrine Brasil não é a Shopee nem outras lojas. Ao comprar pelos botões, podemos receber uma comissão, sem custo extra para você. A compra, o pagamento e a entrega são feitos pela loja.</div>
+    <a class="btn" href="https://s.shopee.com.br/2BFjkVZKKB" target="_blank" rel="noopener sponsored">Ver a escova na Shopee</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Preços, cupons e frete mudam a qualquer momento e valem os da página da loja. Entrega, prazos, formas de pagamento e proteção da compra são da Shopee e variam por produto e região. Imagens ilustrativas. Vídeos enviados por clientes.</p>
+    <p>Contato: <a href="mailto:vitrinibrasil365@gmail.com">vitrinibrasil365@gmail.com</a> • <a href="#">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <span>R$ 23,95<small>ou 4x de R$ 6,60</small></span>
+  <a class="btn" href="https://s.shopee.com.br/2BFjkVZKKB" target="_blank" rel="noopener sponsored">Comprar</a>
+</div>
+
+<script>
+(function(){
+  var stage=document.getElementById('stage'), cap=document.getElementById('caption');
+  var btns=document.querySelectorAll('.thumbs button');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var old=stage.querySelector('video'); if(old){old.pause();}
+      stage.innerHTML='';
+      if(b.dataset.type==='video'){
+        var v=document.createElement('video');
+        v.controls=true; v.setAttribute('playsinline',''); v.preload='metadata'; v.poster=b.dataset.poster;
+        var s=document.createElement('source'); s.src=b.dataset.src; s.type='video/mp4';
+        v.appendChild(s); stage.appendChild(v);
+      }else{
+        var i=document.createElement('img'); i.src=b.dataset.src; i.alt=b.getAttribute('aria-label'); stage.appendChild(i);
+      }
+      cap.textContent=b.dataset.cap;
+      btns.forEach(function(x){x.removeAttribute('aria-current')});
+      b.setAttribute('aria-current','true');
+    });
+  });
+})();
+</script>
+<script>
+/* Conversão no Google Ads: visitante ficou pelo menos 2 segundos e clicou em um botão da Shopee.
+   Conta no máximo 1 vez por visita. */
+(function(){
+  var MIN_MS=2000, SEND_TO='AW-17990966767/8wEKCPitnr4dEO-74YJD', sent=false;
+  function onBuy(){
+    if(sent) return;
+    if(performance.now()<MIN_MS) return;
+    sent=true;
+    try{
+      gtag('event','conversion',{'send_to':SEND_TO,'transport_type':'beacon'});
+    }catch(e){}
+  }
+  document.querySelectorAll('a[href*="shopee.com.br"]').forEach(function(a){
+    a.addEventListener('click',onBuy);
+    a.addEventListener('auxclick',onBuy);
+  });
+})();
+</script>
+</body>
+</html>
